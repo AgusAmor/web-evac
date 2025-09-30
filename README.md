@@ -14,26 +14,47 @@ Aplicación web desarrollada con React, Vite y Tailwind CSS para ofrecer servici
   - Sobre nosotros
   - Contacto
 
-## Instalación y uso
+# web-evac
 
-1. Instala las dependencias:
-   ```sh
-   pnpm install
-   ```
-2. Inicia el servidor de desarrollo:
-   ```sh
-   pnpm run dev
-   ```
+Proyecto web para solicitar turnos de tomografía computarizada veterinaria. Utiliza [Vite](https://vitejs.dev/), [React](https://react.dev/) y [Tailwind CSS](https://tailwindcss.com/).
+
+## Características principales
+
+- **Formulario funcional y accesible**: Solicita turnos con validación, campos obligatorios y advertencias importantes. Incluye carga de archivos (orden médica, estudios previos) y consentimiento de privacidad.
+- **Modal informativo**: Al ingresar a la página de solicitud de turno, se muestra automáticamente un modal con el proceso y notas importantes para el tutor.
+- **Navegación responsive y moderna**: Barra de navegación adaptativa, con menú móvil y enlaces a todas las secciones principales.
+- **Diseño con Tailwind CSS**: Interfaz moderna, adaptable y fácil de personalizar.
+- **Routing con React Router**: Navegación entre páginas como Inicio, Servicios, Nosotros, Contacto y Solicitar Turno.
+
+## Instalación y ejecución
+
+```bash
+pnpm install
+pnpm run dev
+```
 
 ## Estructura del proyecto
 
-- `src/` Código fuente principal
-- `public/` Archivos públicos
+```
+src/
+   App.jsx
+   main.jsx
+   index.css
+   components/
+      Header.jsx      # Barra de navegación responsive
+      Modal.jsx       # Modal informativo del proceso de solicitud
+   pages/
+      HomePage.jsx    # Página principal
+      AskTurn.jsx     # Formulario de solicitud de turno + modal
+      AboutUs.jsx     # Información sobre el equipo
+      Contact.jsx     # Formulario de contacto
+      Services.jsx    # Servicios ofrecidos
+public/
+index.html
+```
 
 ## Personalización
 
-Puedes modificar los colores y estilos en `src/index.css` para adaptar la identidad visual.
-
----
-
-Desarrollado por Agustin Walter Amor.
+- **Modal informativo**: Edita `src/components/Modal.jsx` para cambiar el contenido, estilo o comportamiento del modal que aparece al solicitar turno.
+- **Formulario de solicitud**: Modifica `src/pages/AskTurn.jsx` para agregar, quitar o validar campos según tus necesidades.
+- **Navegación**: Personaliza los enlaces y estilos en `src/components/Header.jsx`.
